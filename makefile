@@ -1,4 +1,4 @@
-ifndef CROSS
+ifndef crosscompiler
 	crosscompiler = gcc
 	out-file = HelloWorld
 endif
