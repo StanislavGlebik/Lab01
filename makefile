@@ -1,9 +1,12 @@
+ifndef CROSS
+	crosscompiler = gcc
+	out-file = HelloWorld
+endif
+
 all: hello
 
 hello:
-	gcc sol.c -o HelloWorld
+	$(crosscompiler) sol.c $(build_flags) -o $(out-file).o	
 
-crosscompiler:
-	
 clean:
-	rm -rf *o HelloWorld
+	rm -rf *.o
