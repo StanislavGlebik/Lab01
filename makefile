@@ -1,5 +1,8 @@
 ifndef crosscompiler
 	crosscompiler = gcc
+endif
+
+ifndef out-file
 	out-file = HelloWorld
 endif
 
