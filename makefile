@@ -1,15 +1,7 @@
-ifndef crosscompiler
-	crosscompiler = gcc
-endif
-
-ifndef out-file
-	out-file = HelloWorld
-endif
-
 all: hello
 
 hello:
-	$(crosscompiler) sol.c $(build_flags) -o $(out-file).o	
+	$(CROSS_COMPILE)gcc sol.c -o HelloWorld.o	
 
 clean:
 	rm -rf *.o
